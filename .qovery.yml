@@ -1,0 +1,15 @@
+---
+application:
+  name: "rest-api"
+  project: "rest-api"
+  organization: "QoveryCommunity"
+databases:
+- type: "MONGODB"
+  name: "myprojectdbname"
+  version: "4.4"
+routers:
+- name: "main-rest-api"
+  routes:
+  - application_name: "rest-api"
+    paths:
+    - "/*"
