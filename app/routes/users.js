@@ -33,8 +33,8 @@ const {
  */
 router.get(
   '/',
-  requireAuth,
-  roleAuthorization(['admin']),
+  //requireAuth,
+  //roleAuthorization(['admin']),
   trimRequest.all,
   getUsers
 )
@@ -44,8 +44,8 @@ router.get(
  */
 router.post(
   '/',
-  requireAuth,
-  roleAuthorization(['admin']),
+  //requireAuth,
+  //roleAuthorization(['admin']),
   trimRequest.all,
   validateCreateUser,
   createUser
@@ -56,8 +56,8 @@ router.post(
  */
 router.get(
   '/:id',
-  requireAuth,
-  roleAuthorization(['admin']),
+  //requireAuth,
+  //roleAuthorization(['admin']),
   trimRequest.all,
   validateGetUser,
   getUser
@@ -68,8 +68,8 @@ router.get(
  */
 router.patch(
   '/:id',
-  requireAuth,
-  roleAuthorization(['admin']),
+  //requireAuth,
+  //roleAuthorization(['admin']),
   trimRequest.all,
   validateUpdateUser,
   updateUser
@@ -80,8 +80,8 @@ router.patch(
  */
 router.delete(
   '/:id',
-  requireAuth,
-  roleAuthorization(['admin']),
+  //requireAuth,
+  //roleAuthorization(['admin']),
   trimRequest.all,
   validateDeleteUser,
   deleteUser
