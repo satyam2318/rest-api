@@ -54,8 +54,7 @@ node('master') {
             sh  'cd /home/neosoft/Documents/nodeApp/ndap/'
             sh 'tar -xf Node_$BUILD_NUMBER.tar.gz'
             sh 'docker rmi -f nodeimage'
-            sh 'docker stop nodecontainer'
-            sh 'docker rm nodecontainer'
+            sh 'docker stop nodecontainer || true && docker rm nodecontainer || true'
             sh 'docker build -t nodeimage .'
             
        }
